@@ -1,4 +1,4 @@
-#let preamble(title: "[Title]", description: none, body) = {
+#let preamble(title: "[Title]", description: none, language: "en", body) = {
   import "imports/boxes.typ": *
   import "imports/text.typ": *
   import "@preview/hydra:0.6.2": hydra
@@ -11,7 +11,13 @@
   )
 
   heading(numbering: none, outlined: false)[
-    Contents
+    #if language == "en" [
+      Contents
+    ] else if language == "de" [
+      Inhalt
+    ] else [
+      Language not defined
+    ]
   ]
   columns(2)[
     #outline(title: none) // title needs to be none, otherwise it will also be compressed into the column
