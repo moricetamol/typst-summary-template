@@ -15,10 +15,10 @@
 ]
 
 #let apply-format(
-  body,
   name: "Title",
   description: none,
-  dark: false) = [
+  dark: false,
+  body,) = [
   // TODO implement dark mode
   // Set the page size and margins
   #set page(paper: "a4")
@@ -26,7 +26,7 @@
     top: 2cm, bottom: 2cm, x: 2cm)
   )
   // Define the standard font
-  #set text(font: "New Computer Modern")
+  #set text(size: 11pt)
 
   #set page(header: anchor())
 

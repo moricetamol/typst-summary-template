@@ -1,4 +1,4 @@
-#import "Template.typ": main-color, math-color, code-color
+#import "template.typ": main-color, math-color, code-color
 
 #let dt(body) = (
   text(
