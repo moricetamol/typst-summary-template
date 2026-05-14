@@ -90,6 +90,26 @@
   #text(fill: errorcolor, weight: "semibold")[Error] #body
 ]
 
+#let psprint(body) = [
+  #keyword[Print] #body
+]
+
 #let psstring(body) = [
   #text(fill: stringcolor, font: ("CMU Typewriter Text", "DejaVu Sans Mono"))[#body]
+]
+
+#let psfncall(name, args) = [
+  #psfntxt[#name] (#text(font: ("CMU Typewriter Text", "DejaVu Sans Mono"))[#args])
+]
+
+#let psstructinst(name, fieldvals) = [
+  #psfntxt[#name] {#fieldvals}
+]
+
+#let psbigtext(body) = [
+  #text(weight: "semibold")[#body]
+]
+
+#let psto = [
+  #psbigtext[To]
 ]

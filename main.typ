@@ -25,11 +25,13 @@
 
 #psc(title: [Pseudocode])[
   + #psfn([test], [])
-    + #psfor[i $in$ 1..10]
+    + #psfor[i = 0 #psto 1..10]
       + #psreturn[i]
       - #cm[Comment]
     + #pswhile[i > 0]
-      + #pserror[important error] 
+      + #pserror[important error]
+    + #psforeach[x $in$ arr]
+      + #psprint[x]
   + #psstruct([Node], [sdasda])
     + #psif[i % 2 == 0]
       + #pscontinue
